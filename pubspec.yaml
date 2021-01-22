@@ -57,6 +57,7 @@ flutter:
   assets:
      - assests/images/
      - assests/icons/
+     - assests/images_copy/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
