@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:medicina/components/default_button.dart';
+import 'package:medicina/screens/home/home_screen.dart';
 import 'package:medicina/size_config.dart';
 
 class Body extends StatelessWidget {
@@ -8,6 +9,14 @@ class Body extends StatelessWidget {
     return Column(
       children: [
         SizedBox(height: SizeConfig.screenHeight * 0),
+        Text(
+          "Login Successfully",
+          style: TextStyle(
+            fontSize: getProportionateScreenWidth(25),
+            fontWeight: FontWeight.bold,
+            color: Colors.black,
+          ),
+        ),
         Image.asset(
           "assests/images/success.png",
           height: SizeConfig.screenHeight * 0.5, // 50%
@@ -17,20 +26,12 @@ class Body extends StatelessWidget {
           height: SizeConfig.screenHeight * 0.15, // 10%
         ),
         SizedBox(height: SizeConfig.screenHeight * 0.01),
-        Text(
-          "Login Success",
-          style: TextStyle(
-            fontSize: getProportionateScreenWidth(25),
-            fontWeight: FontWeight.bold,
-            color: Colors.black,
-          ),
-        ),
         Spacer(),
         SizedBox(
           width: SizeConfig.screenWidth * 0.6,
           child: DefaultButton(
             text: "Back to home",
-            press: () {},
+            press: () => Navigator.pushNamed(context, HomeScreen.routeName),
           ),
         ),
         Spacer(),

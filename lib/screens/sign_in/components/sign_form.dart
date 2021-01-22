@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:medicina/components/custom_surffix_icon.dart';
 import 'package:medicina/components/default_button.dart';
 import 'package:medicina/components/form_error.dart';
+import 'package:medicina/screens/authentication/auth_screen.dart';
 import 'package:medicina/screens/forgot_password/forgot_password_Screen.dart';
 import 'package:medicina/screens/login_success/login_success_screen.dart';
+import 'package:medicina/screens/otp/otp_screen.dart';
 
 import '../../../constants.dart';
 import '../../../size_config.dart';
@@ -19,6 +21,21 @@ class _SignFormState extends State<SignForm> {
   String password;
   bool remember = false;
   final List<String> errors = [];
+
+  void addError({String error}) {
+    if (!errors.contains(error))
+      setState(() {
+        errors.add(error);
+      });
+  }
+
+  void removeError({String error}) {
+    if (errors.contains(error))
+      setState(() {
+        errors.remove(error);
+      });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Form(
@@ -59,7 +76,7 @@ class _SignFormState extends State<SignForm> {
             press: () {
               if (_formKey.currentState.validate()) {
                 _formKey.currentState.save();
-                // if all are valid then go to success screen
+                // go to otp screen
                 Navigator.pushNamed(context, LoginSuccessScreen.routeName);
               }
             },
