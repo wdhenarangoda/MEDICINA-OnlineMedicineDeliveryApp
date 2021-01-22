@@ -10,7 +10,14 @@ class SplashScreen extends StatelessWidget {
     // You have to call it on your starting screen
     SizeConfig().init(context);
     return Scaffold(
-      body: Body(),
+      body: Container(
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
+                colors: [Colors.orange[800], Colors.yellow[400]]),
+          ),
+          child: Body()),
     );
   }
 }

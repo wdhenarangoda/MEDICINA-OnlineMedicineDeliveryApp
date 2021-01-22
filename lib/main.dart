@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
+      title: 'MEDICINA',
       theme: theme(),
       home: CheckoutScreen(),
       // We use routeName so that we dont need to remember the name
