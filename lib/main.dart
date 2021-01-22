@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:medicina/routs.dart';
+import 'package:medicina/screens/Contactus.dart';
 import 'package:medicina/screens/checkout/checkout_screen.dart';
 import 'package:medicina/screens/splash/splash_screen.dart';
 import 'package:medicina/theme.dart';
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'MEDICINA',
       theme: theme(),
-      home: CheckoutScreen(),
+      home: ContactusScreen(),
       // We use routeName so that we dont need to remember the name
       //initialRoute: SplashScreen.routeName,
       routes: routes,
