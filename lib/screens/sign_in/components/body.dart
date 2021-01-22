@@ -23,7 +23,7 @@ class Body extends StatelessWidget {
           child: SingleChildScrollView(
             child: Column(
               children: [
-                SizedBox(height: SizeConfig.screenHeight * 0.00),
+                SizedBox(height: SizeConfig.screenHeight * 0.0),
                 Text(
                   "Welcome Back",
                   style: TextStyle(
@@ -33,7 +33,7 @@ class Body extends StatelessWidget {
                   ),
                 ),
                 Text(
-                  "Sign in with your email and password \n or continue with social media",
+                  "Sign in with your email and password \n or social media",
                   textAlign: TextAlign.center,
                 ),
                 SizedBox(height: SizeConfig.screenHeight * 0.08),
