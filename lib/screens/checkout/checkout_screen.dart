@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:medicina/components/theme.dart';
+import 'package:medicina/screens/checkout/alert.dart';
 import 'package:medicina/screens/checkout/credit_card_model.dart';
 
 class CheckoutScreen extends StatefulWidget {
@@ -194,7 +195,10 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
           shape:
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(8.0)),
           onPressed: () {
-            Navigator.popUntil(context, (route) => route.isFirst);
+            Navigator.push(
+    context,
+    MaterialPageRoute(builder: (context) => AlertScreen()),
+  );
           },
           color: AppColors.orange,
           child: Text(
