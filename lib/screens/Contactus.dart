@@ -11,7 +11,15 @@ class _ContactusScreenState extends State<ContactusScreen> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      
+      decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                      begin: Alignment.topCenter,
+                      end: Alignment.bottomCenter,
+                      colors: [
+                        Color(0XFF343434).withOpacity(0.4),
+                        Color(0XFF343434).withOpacity(0.15),
+                      ]),
+                ),
       child: Scaffold(
         appBar: AppBar(
          title: Icon(Icons.arrow_back),
