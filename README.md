@@ -1,4 +1,4 @@
-# medicina
+# Medicina - Online Medicine Delivery App
 
 A new Flutter project.
 
